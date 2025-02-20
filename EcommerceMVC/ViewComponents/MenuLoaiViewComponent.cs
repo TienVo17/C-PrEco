@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceMVC.ViewComponents
 {
-    public class MenuLoaiViewComponent : ViewComponent  
+    public class MenuLoaiViewComponent : ViewComponent
     {
         private readonly Hshop2023Context db;
 
@@ -16,7 +16,7 @@ namespace EcommerceMVC.ViewComponents
                 MaLoai = lo.MaLoai,
                 TenLoai = lo.TenLoai,
                 SoLuong = lo.HangHoas.Count
-            }).OrderBy(p=> p.TenLoai);
+            }).OrderBy(p => p.TenLoai);
             return View(data);
         }
     }
